@@ -47,7 +47,7 @@ namespace Application
             {
                 Console.WriteLine("You win a Cup");
             }
-
+            Console.WriteLine();
 
             Random random = new Random();
             int daysUntilExpiration = random.Next(12);
@@ -74,6 +74,19 @@ namespace Application
             if (daysUntilExpiration > 0)
             {
                 Console.WriteLine($"Renew now and get {discountPercentage}%");
+            }
+            Console.WriteLine();
+
+            //nested iteration
+            //Report the Order IDs that need further investigation
+            string[] IDs = { "B123", "C234", "A345", "C15", "B177",
+                              "G3003", "C235", "B179" };
+            foreach (var item in IDs)
+            {
+                if (item.StartsWith("B"))
+                {
+                    Console.WriteLine($"The {item} is fraudlent");
+                }
             }
 
 
